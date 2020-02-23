@@ -31,6 +31,7 @@ export default {
       return{
           headerMenu: [
               {link: '/', title: 'Home'},
+              {link: '/tasks', title: 'Task'},
               {link: '/login', title: 'Login'},
               {link: '/registration', title: 'Registration'},
           ]
