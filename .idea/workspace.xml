@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c983e70-4ea6-4e05-b55e-83c8b67fa61a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/Task.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/router/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="7c983e70-4ea6-4e05-b55e-83c8b67fa61a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/components/Home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="133" column="62" selection-start-line="133" selection-start-column="62" selection-end-line="133" selection-end-column="62" />
+            <state relative-caret-position="353">
+              <caret line="130" column="55" lean-forward="true" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -118,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="250" />
     <option name="y" value="146" />
     <option name="width" value="980" />
@@ -206,16 +199,15 @@
       <workItem from="1582381211346" duration="9307000" />
       <workItem from="1582452866448" duration="553000" />
       <workItem from="1582455557850" duration="599000" />
-      <workItem from="1582469530552" duration="7118000" />
+      <workItem from="1582469530552" duration="7134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51437000" />
+    <option name="totallyTimeSpent" value="51453000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16111952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -317,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/components/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="133" column="62" selection-start-line="133" selection-start-column="62" selection-end-line="133" selection-end-column="62" />
+        <state relative-caret-position="353">
+          <caret line="130" column="55" lean-forward="true" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
         </state>
       </provider>
     </entry>
