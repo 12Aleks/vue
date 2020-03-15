@@ -25,9 +25,7 @@
                             input#inlineRadio2.form-check-input(type='radio' name='inline' value='Serial' v-model='whatWatch')
                             label.form-check-label(for='inlineRadio2') Serial
                     .total_time
-                        .totla_time__film(
-                        v-if='whatWatch === "Film"'
-                        )
+                        .totla_time__film( v-if='whatWatch === "Film"')
                             .fotm-group
                                 label.time-title Minutes
                                 input.time-input.form-control.w-25(
@@ -67,16 +65,16 @@
 
                     input.mb-3.mt-3(type='submit' value="Add new film" v-on:click="newTask")
                     hr
-                    .form-group
-                     input(type="text" v-model="newTag")
-                     input.ml-2(type='submit' value="Add new tag" @click="addTag")
-                    .badge-block.d-inline-flex.pr-1(
-                      v-for="(tag, index) in tags"
-                      :key="tag.title")
-                        span.badge.badge-pill.badge-success(@click="deleteTags(index)") {{tag.title}} &times;
-
-
-
+                    input.mb-2(type='button' value="Add tag" @click='addtag = !addtag')
+                    .test(v-if='addtag')
+                      .form-group
+                       input(type="text" v-model="newTag ")
+                       input.ml-2(type='submit' value="Add new tag" @click="addTag")
+                      .badge-block.d-inline-flex.pr-1(
+                       v-for="(tag, index) in tags"
+                       :key="tag.index")
+                        span.pb-1.badge.badge-pill(:class="{'badge-success': tag.usb, 'badge-light': !tag.usb}" @click="tag.usb = !tag.usb") {{tag.title}}
+                         span.deltag.pl-2(v-on:click="deleteTags") &times;
 </template>
 
 <script>
@@ -84,6 +82,7 @@
         name: 'Home',
         data() {
             return {
+                addtag: false,
                 newTag: '',
                 tags: [
                     {title: 'Comedy', usb: false},
@@ -136,7 +135,6 @@
             deleteTags(index) {
                 this.tags.splice(index, 1)
             },
-            
         },
         computed: {
             filmTime(){
@@ -154,6 +152,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
+  .active
 
+  .deltag
+    cursor pointer
 
 </style>
