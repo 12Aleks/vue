@@ -20,6 +20,9 @@ export default{
     ]
   },
   getters: {
+    tasks(state){
+      return state.tasks
+    }
   },
   mutations: {
     newVideo(state, payload){

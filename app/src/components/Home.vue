@@ -70,8 +70,9 @@
             .badge-block.d-inline-flex.pr-1(
               v-for="(tag, index) in tags"
               :key="tag.index")
-              span.pb-1.badge.badge-pill(:class="{'badge-success': tag.usb, 'badge-light': !tag.usb}" @click="tag.usb = !tag.usb") {{tag.title}}
+              span.pb-1.badge.badge-pill(:class="{'badge-success': tag.usb, 'badge-light': !tag.usb}" @click="tagis(tag)") {{tag.title}}
                 span.deltag.pl-2(v-on:click="deleteTags") &times;
+
           .form-group
            input.bg-success.text-light.border-success.float-right.mb-3.mt-3(type='submit' value="Add new film" v-on:click="newTask")
 </template>
@@ -79,6 +80,7 @@
 <script>
   export default {
     name: 'Home',
+
     data() {
       return {
         addtag: false,
@@ -89,9 +91,9 @@
           {title: 'Adventure', usb: false},
         ],
         taskTitle: "",
-        taskId: 3,
         taskDescription: '',
         whatWatch: '',
+        selecttags: [],
 
         //total Time
         //Film
@@ -118,7 +120,7 @@
          }
         const task = ({
           title: this.taskTitle,
-          tags: this.tags,
+          tags: this.selecttags,
           time,
           description: this.taskDescription,
           whatWatch: this.whatWatch,
@@ -138,10 +140,15 @@
       addTag() {
         this.tags.push({title: this.newTag, usb: false})
       },
+      tagis(tag){
+        tag.usb = !tag.usb;
+        if(tag.usb === true) {
+          this.selecttags.push({title: tag.title})
+        }
+      },
       deleteTags(index) {
         this.tags.splice(index, 1)
       },
-
     },
     computed: {
       filmTime() {

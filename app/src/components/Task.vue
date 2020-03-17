@@ -6,9 +6,15 @@
                     h2.pt-2 Tasks
                         hr
                 .col-md-12
+                  .form-group
+                    p {{filter}}
+                    button.mr-2(@click="filter = 'active'") Active
+                    button.mr-2(@click="filter = 'completed'") Completed
+                    button.mr-2(@click="filter = 'all'") All
+                .col-md-12
                     .task-list
                         .task-item(
-                        v-for="(task, index) in tasks"
+                        v-for="(task, index) in tasksFilter"
                         :key="task.id"
                         :class="{completed: task.completed}"
                         )
@@ -33,9 +39,13 @@
 </template>
 
 <script>
-    import {mapState} from "vuex";
     export default {
         name: "task",
+        data(){
+          return{
+            filter: 'active'
+          }
+        },
         methods: {
             deleteVidio(index) {
                 this.tasks.splice(index, 1)
@@ -43,9 +53,16 @@
         },
         computed: {
           // store
-          ...mapState({
-            tasks: state => state.task.tasks
-          })
+          tasksFilter(){
+              if(this.filter === 'active'){
+
+              }else if (this.filter === 'completed'){
+
+              }else if (this.filter === 'all'){
+                return  this.$store.getters.tasks
+              }
+                return this.filter === 'active'
+          }
         }
     }
 </script>
